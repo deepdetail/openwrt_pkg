@@ -1,0 +1,8 @@
+hello: hello.o
+	$(CC) $(LDFLAGS) hello.o -o hello
+
+hello.o: hello.c
+	$(CC) $(CFLAGS) -c hello.c
+
+clean:
+	rm *.o hello
